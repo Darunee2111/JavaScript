@@ -1,10 +1,13 @@
-const str = 'The quick brown fox jumps over the lazy dog.';
+function circumference(r) {
+    if (Number.isNaN(Number.parseFloat(r))) {
+        return 0;
+    }
+    return parseFloat(r) * 2.0 * Math.PI;
 
-const words = str.split('');
-console.log(words[3]);
-//expected output : "fox"
+}
 
-const chars = str.split('');
-console.log(chars[8]);
+console.log(circumference("4.576abcdefgh"));
+// expected output : 28.695307297229173
 
-//expected output : "k"
+console.log(circumference("abcdefgh"));
+// expected output : 0
