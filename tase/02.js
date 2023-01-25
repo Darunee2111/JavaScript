@@ -2,19 +2,18 @@
 //bigheatDigit(2) - 2
 //bigheatDigit(377401) - 7
 
-const bigheatDigit = (num) => {
-    if (num === undefined) {
-      return "Input Parameter can't be empty"
-    } else {
-    let a = Math.floor(num / 2);
-    let b = num - a;
-    let c = [];
-    c.push(a, b);
-    return c;
+function highestDigit(num) {
+    var highest = 0;
+    var numString = num.toString();
+    for (var i = 0; i < numString.length; i++) {
+      if (numString[i] > highest) {
+        highest = numString[i];
+      } 
     }
-  };
+    return highest;
+  }
 
-console.log(bigheatDigit(379)) ; //9
-console.log(bigheatDigit(2)) ; //2
-console.log(bigheatDigit(377401)) ; //7
+  console.log(highestDigit(379));
+  console.log(highestDigit(2));
+  console.log(highestDigit(377401));
 
