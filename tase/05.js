@@ -1,11 +1,22 @@
-getBudgets([
-    { name: "John" , age: 21, budget: 23000},
-    {name: "Steve", age: 32, budget: 40000 },
-    {name: "Martin", age: 16, budget: 2700};
-]) //65700
+/*Create the function that takes an array with objects 
+and returns the sum of people's budgets.*/
 
-getBudgets([
-    { name: "John" , age: 21, budget: 29000},
-    {name: "Steve", age: 32, budget: 32000 },
-    {name: "Martin", age: 16, budget: 1600};
-]) //62600
+function getBudgets(array) {
+    var sum =0 
+    for (let i=0; i <array.length; i++) 
+        sum +=array[i].budget 
+    return sum 
+}
+
+  let arrayOneTest =[
+    { name: "Mahmoud", age: 39, budget: 23000 },
+    { name: "Panyet",  age: 32, budget: 40000 },
+    { name: "Panyoot",  age: 22, budget:27000 }
+  ];
+
+let arrayTwoTest=[...arrayOneTest];
+
+console.log(arrayTwoTest);
+
+
+console.log("The Total Budget is :"+getBudgets(arrayTwoTest)+"CAD");
